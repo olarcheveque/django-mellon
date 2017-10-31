@@ -212,7 +212,8 @@ class LoginView(ProfileMixin, LogMixin, View):
             self.log.warning('no user found for NameID %r', attributes['name_id_content'])
             return render(request, 'mellon/user_not_found.html',
                           {'saml_attributes': attributes})
-        request.session['lasso_session_dump'] = login.session.dump()
+        if login.session:
+            request.session['lasso_session_dump'] = login.session.dump()
 
         return HttpResponseRedirect(next_url)
 
