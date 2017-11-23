@@ -13,6 +13,7 @@ class AppSettings(object):
         'NAME_ID_POLICY_FORMAT': None,
         'NAME_ID_POLICY_ALLOW_CREATE': True,
         'FORCE_AUTHN': False,
+        'ADD_AUTHNREQUEST_NEXT_URL_EXTENSION': False,
         'ADAPTER': (
             'mellon.adapters.DefaultAdapter',
         ),
