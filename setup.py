@@ -96,7 +96,7 @@ setup(name="django-mellon",
           'isodate',
       ],
       setup_requires=[
-          'django',
+          'django<2.0',
       ],
       tests_require=[
           'nose>=0.11.4',
